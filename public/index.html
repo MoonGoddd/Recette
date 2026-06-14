@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recette du Monde</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="min-h-screen bg-canvas">
+
+  <!-- Navigation -->
+  <nav class="no-print fixed top-0 left-0 right-0 z-50 bg-canvas/90 backdrop-blur-md border-b border-hairline-soft">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-display text-3xl tracking-wide text-ink uppercase" data-i18n="site_name">Recette du Monde</a>
+
+      <div class="hidden md:flex flex-1 max-w-md mx-8">
+        <div class="relative w-full">
+          <input
+            type="text"
+            id="search-input"
+            data-i18n-placeholder="search_placeholder"
+            placeholder="Rechercher une recette..."
+            class="w-full h-10 px-5 pr-10 rounded-lg bg-cloud text-sm text-ink placeholder:text-mute focus:outline-none focus:bg-canvas focus:ring-2 focus:ring-ink transition-all"
+          >
+          <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-mute" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+      </div>
+
+      <button id="lang-toggle" class="px-4 py-2 rounded-full bg-ink text-on-primary text-xs font-medium uppercase tracking-wider hover:bg-charcoal transition-colors">
+        <span id="lang-label">FR</span>
+      </button>
+    </div>
+
+    <div class="md:hidden px-6 pb-3">
+      <input
+        type="text"
+        id="search-input-mobile"
+        data-i18n-placeholder="search_placeholder"
+        placeholder="Rechercher une recette..."
+        class="w-full h-10 px-4 rounded-lg bg-cloud text-sm text-ink placeholder:text-mute focus:outline-none focus:ring-2 focus:ring-ink transition-all"
+      >
+    </div>
+  </nav>
+
+  <!-- Hero — Full bleed -->
+  <section class="relative h-[85vh] min-h-[500px] overflow-hidden">
+    <img
+      src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600&q=80"
+      alt="Cuisine du monde"
+      class="absolute inset-0 w-full h-full object-cover"
+    >
+    <div class="absolute inset-0 hero-gradient"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 lg:p-12 max-w-[1440px] mx-auto">
+      <h1 class="font-display text-[clamp(3rem,10vw,7rem)] leading-[0.9] text-on-dark uppercase tracking-tight" data-i18n="hero_title">
+        Explorez les<br>saveurs du monde.
+      </h1>
+      <p class="mt-4 text-on-dark/80 text-lg max-w-lg" data-i18n="hero_subtitle">Des recettes authentiques de tous les continents, chez vous.</p>
+      <a href="#recettes" class="inline-block mt-6 px-8 py-3 bg-on-primary text-ink font-medium text-sm rounded-full hover:bg-cloud transition-colors" data-i18n="hero_cta">Découvrir</a>
+    </div>
+  </section>
+
+  <!-- Recettes du moment — Carousel -->
+  <section class="section-dark py-16 lg:py-20">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="font-display text-4xl lg:text-5xl uppercase tracking-tight text-on-dark" data-i18n="section_trending">Recettes du moment</h2>
+        <div class="hidden sm:flex gap-2">
+          <button id="carousel-prev" class="w-10 h-10 rounded-full bg-on-dark/10 text-on-dark flex items-center justify-center hover:bg-on-dark/20 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <button id="carousel-next" class="w-10 h-10 rounded-full bg-on-dark/10 text-on-dark flex items-center justify-center hover:bg-on-dark/20 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="carousel" class="flex gap-4 overflow-x-auto scrollbar-hide carousel-scroll pb-4">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter strip -->
+  <section id="recettes" class="no-print bg-canvas py-12 lg:py-16">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+      <div class="flex gap-2 overflow-x-auto scrollbar-hide pb-4" id="category-strip">
+        <button class="category-btn active px-5 py-2.5 rounded-full bg-ink text-on-primary text-sm font-medium whitespace-nowrap transition-all" data-filter="all" data-i18n="cat_all">Tout</button>
+        <button class="category-btn px-5 py-2.5 rounded-full border border-hairline text-sm font-medium text-ink whitespace-nowrap hover:bg-ink hover:text-on-primary transition-all" data-filter="type:entree" data-i18n="cat_entree">Entrées</button>
+        <button class="category-btn px-5 py-2.5 rounded-full border border-hairline text-sm font-medium text-ink whitespace-nowrap hover:bg-ink hover:text-on-primary transition-all" data-filter="type:plat" data-i18n="cat_plat">Plats</button>
+        <button class="category-btn px-5 py-2.5 rounded-full border border-hairline text-sm font-medium text-ink whitespace-nowrap hover:bg-ink hover:text-on-primary transition-all" data-filter="type:dessert" data-i18n="cat_dessert">Desserts</button>
+        <button class="category-btn px-5 py-2.5 rounded-full border border-hairline text-sm font-medium text-ink whitespace-nowrap hover:bg-ink hover:text-on-primary transition-all" data-filter="type:boisson" data-i18n="cat_boisson">Boissons</button>
+        <button class="category-btn px-5 py-2.5 rounded-full border border-hairline text-sm font-medium text-ink whitespace-nowrap hover:bg-ink hover:text-on-primary transition-all" data-filter="type:snack" data-i18n="cat_snack">Snacks</button>
+      </div>
+
+      <div class="flex gap-2 overflow-x-auto scrollbar-hide pt-2 pb-4" id="origin-strip">
+        <button class="origin-btn px-4 py-2 rounded-full bg-cloud text-sm font-medium text-mute whitespace-nowrap hover:bg-ink hover:text-on-primary transition-all" data-origin="france">🇫🇷 France</button>
+        <button class="origin-btn px-4 py-2 rounded-full bg-cloud text-sm font-medium text-mute whitespace-nowrap hover:bg-ink hover:text-on-primary transition-all" data-origin="italie">🇮🇹 Italie</button>
+        <button class="origin-btn px-4 py-2 rounded-full bg-cloud text-sm font-medium text-mute whitespace-nowrap hover:bg-ink hover:text-on-primary transition-all" data-origin="japon">🇯🇵 Japon</button>
+        <button class="origin-btn px-4 py-2 rounded-full bg-cloud text-sm font-medium text-mute whitespace-nowrap hover:bg-ink hover:text-on-primary transition-all" data-origin="mexique">🇲🇽 Mexique</button>
+        <button class="origin-btn px-4 py-2 rounded-full bg-cloud text-sm font-medium text-mute whitespace-nowrap hover:bg-ink hover:text-on-primary transition-all" data-origin="inde">🇮🇳 Inde</button>
+        <button class="origin-btn px-4 py-2 rounded-full bg-cloud text-sm font-medium text-mute whitespace-nowrap hover:bg-ink hover:text-on-primary transition-all" data-origin="maroc">🇲🇦 Maroc</button>
+        <button class="origin-btn px-4 py-2 rounded-full bg-cloud text-sm font-medium text-mute whitespace-nowrap hover:bg-ink hover:text-on-primary transition-all" data-origin="thailande">🇹🇭 Thaïlande</button>
+        <button class="origin-btn px-4 py-2 rounded-full bg-cloud text-sm font-medium text-mute whitespace-nowrap hover:bg-ink hover:text-on-primary transition-all" data-origin="coree">🇰🇷 Corée</button>
+        <button class="origin-btn px-4 py-2 rounded-full bg-cloud text-sm font-medium text-mute whitespace-nowrap hover:bg-ink hover:text-on-primary transition-all" data-origin="grece">🇬🇷 Grèce</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipe grid -->
+  <main class="max-w-[1440px] mx-auto px-6 lg:px-12 pb-20">
+    <div id="recipe-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1">
+      <!-- Recipes rendered by JS -->
+    </div>
+    <div id="no-results" class="hidden text-center py-20">
+      <p class="font-display text-3xl uppercase text-mute" data-i18n="no_results">Aucune recette trouvée.</p>
+    </div>
+  </main>
+
+  <!-- Category showcase — dark section -->
+  <section class="section-dark py-16 lg:py-20">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+      <h2 class="font-display text-4xl lg:text-5xl uppercase tracking-tight mb-10" data-i18n="section_categories">Par catégorie</h2>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-1">
+        <a href="category.html?type=entree" class="group relative aspect-[4/5] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1541014741259-de529411b96a?w=600&q=75" alt="Entrées" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"></div>
+          <div class="absolute bottom-4 left-4">
+            <span class="font-display text-2xl lg:text-3xl uppercase text-on-dark" data-i18n="cat_entree">Entrées</span>
+          </div>
+        </a>
+        <a href="category.html?type=plat" class="group relative aspect-[4/5] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=75" alt="Plats" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"></div>
+          <div class="absolute bottom-4 left-4">
+            <span class="font-display text-2xl lg:text-3xl uppercase text-on-dark" data-i18n="cat_plat">Plats</span>
+          </div>
+        </a>
+        <a href="category.html?type=dessert" class="group relative aspect-[4/5] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=75" alt="Desserts" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"></div>
+          <div class="absolute bottom-4 left-4">
+            <span class="font-display text-2xl lg:text-3xl uppercase text-on-dark" data-i18n="cat_dessert">Desserts</span>
+          </div>
+        </a>
+        <a href="category.html?type=boisson" class="group relative aspect-[4/5] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&q=75" alt="Boissons" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"></div>
+          <div class="absolute bottom-4 left-4">
+            <span class="font-display text-2xl lg:text-3xl uppercase text-on-dark" data-i18n="cat_boisson">Boissons</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="no-print border-t border-hairline-soft bg-canvas">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-12 py-12">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div>
+          <h3 class="font-medium text-ink text-sm uppercase tracking-wider mb-4" data-i18n="footer_about_title">À propos</h3>
+          <p class="text-sm text-mute leading-relaxed" data-i18n="footer_about_text">Un projet portfolio de recettes du monde entier, construit en HTML, Tailwind CSS et JavaScript vanilla.</p>
+        </div>
+        <div>
+          <h3 class="font-medium text-ink text-sm uppercase tracking-wider mb-4" data-i18n="footer_categories_title">Catégories</h3>
+          <ul class="space-y-2 text-sm text-mute">
+            <li><a href="category.html?type=entree" class="hover:text-ink transition-colors" data-i18n="cat_entree">Entrées</a></li>
+            <li><a href="category.html?type=plat" class="hover:text-ink transition-colors" data-i18n="cat_plat">Plats</a></li>
+            <li><a href="category.html?type=dessert" class="hover:text-ink transition-colors" data-i18n="cat_dessert">Desserts</a></li>
+            <li><a href="category.html?type=boisson" class="hover:text-ink transition-colors" data-i18n="cat_boisson">Boissons</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-medium text-ink text-sm uppercase tracking-wider mb-4" data-i18n="footer_links_title">Liens</h3>
+          <ul class="space-y-2 text-sm text-mute">
+            <li><a href="https://github.com/MoonGoddd/Recette" target="_blank" class="hover:text-ink transition-colors">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-10 pt-6 border-t border-hairline-soft text-center text-xs text-stone">
+        <p>&copy; 2026 Recette du Monde. <span data-i18n="footer_credits">Photos : Unsplash/Pexels</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

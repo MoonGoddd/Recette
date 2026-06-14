@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catégorie — Recette du Monde</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="min-h-screen bg-canvas">
+
+  <!-- Navigation -->
+  <nav class="no-print fixed top-0 left-0 right-0 z-50 bg-canvas/90 backdrop-blur-md border-b border-hairline-soft">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-display text-3xl tracking-wide text-ink uppercase" data-i18n="site_name">Recette du Monde</a>
+      <button id="lang-toggle" class="px-4 py-2 rounded-full bg-ink text-on-primary text-xs font-medium uppercase tracking-wider hover:bg-charcoal transition-colors">
+        <span id="lang-label">FR</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Category header -->
+  <section class="section-dark pt-24 pb-12 lg:pt-28 lg:pb-16">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+      <a href="index.html" class="text-sm text-stone hover:text-on-dark transition-colors" data-i18n="back_home">← Retour aux recettes</a>
+      <h1 id="category-title" class="mt-4 font-display text-[clamp(2.5rem,8vw,5rem)] uppercase leading-[0.9] tracking-tight"></h1>
+      <p id="category-count" class="mt-2 text-stone text-sm"></p>
+    </div>
+  </section>
+
+  <!-- Recipe grid -->
+  <main class="max-w-[1440px] mx-auto px-6 lg:px-12 py-12">
+    <div id="recipe-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1">
+      <!-- Recipes rendered by JS -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="no-print border-t border-hairline-soft bg-canvas">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-12 py-8 text-center text-xs text-stone">
+      <p>&copy; 2026 Recette du Monde</p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/category.js"></script>
+</body>
+</html>

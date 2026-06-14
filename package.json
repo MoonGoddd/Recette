@@ -1,0 +1,16 @@
+{
+  "name": "recette-du-monde",
+  "version": "1.0.0",
+  "description": "Site statique de recettes de cuisine du monde",
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i ./css/input.css -o ./public/css/style.css --minify",
+    "dev": "concurrently \"npx @tailwindcss/cli -i ./css/input.css -o ./public/css/style.css --watch\" \"npx serve public -l 3000\"",
+    "serve": "npx serve public -l 3000"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "concurrently": "^9.0.0",
+    "serve": "^14.0.0",
+    "tailwindcss": "^4.1.0"
+  }
+}

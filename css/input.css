@@ -1,0 +1,111 @@
+@import "tailwindcss";
+@source "../public";
+
+@theme {
+  --color-primary: #ff385c;
+  --color-primary-active: #e00b41;
+  --color-ink: #111111;
+  --color-charcoal: #39393b;
+  --color-mute: #707072;
+  --color-stone: #9e9ea0;
+  --color-hairline: #cacacb;
+  --color-hairline-soft: #e5e5e5;
+  --color-canvas: #ffffff;
+  --color-cloud: #f5f5f5;
+  --color-on-primary: #ffffff;
+  --color-on-dark: #ffffff;
+
+  --font-display: "Bebas Neue", "Anton", "Impact", sans-serif;
+  --font-sans: "Inter", -apple-system, system-ui, "Roboto", "Helvetica Neue", sans-serif;
+
+  --radius-none: 0px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 30px;
+  --radius-full: 9999px;
+
+  --shadow-subtle: inset 0 -1px 0 var(--color-hairline-soft);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background-color: var(--color-canvas);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-scroll {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  .carousel-scroll > * {
+    scroll-snap-align: start;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 40%, transparent 100%);
+  }
+
+  .section-dark {
+    background-color: var(--color-ink);
+    color: var(--color-on-dark);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #ff6b81 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+    background: #fff;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .recipe-detail {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .recipe-hero-img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+}

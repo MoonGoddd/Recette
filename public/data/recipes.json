@@ -1,0 +1,973 @@
+[
+  {
+    "id": "ramen-tonkotsu",
+    "title_fr": "Ramen Tonkotsu",
+    "title_en": "Tonkotsu Ramen",
+    "description_fr": "Un bouillon de porc riche et crémeux servi avec des nouilles, un œuf mariné et du chashu.",
+    "description_en": "A rich and creamy pork bone broth served with noodles, marinated egg and chashu pork.",
+    "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600&q=75",
+    "type": "plat",
+    "origin": "japon",
+    "prep_time": 30,
+    "cook_time": 480,
+    "servings": 4,
+    "difficulty": "difficile",
+    "tags": ["porc", "nouilles", "bouillon", "asiatique", "umami"],
+    "ingredients_fr": [
+      { "item": "Os de porc", "quantity": "1 kg" },
+      { "item": "Nouilles ramen fraîches", "quantity": "400 g" },
+      { "item": "Poitrine de porc", "quantity": "500 g" },
+      { "item": "Œufs", "quantity": "4" },
+      { "item": "Sauce soja", "quantity": "100 ml" },
+      { "item": "Mirin", "quantity": "50 ml" },
+      { "item": "Gingembre frais", "quantity": "30 g" },
+      { "item": "Ail", "quantity": "6 gousses" },
+      { "item": "Oignons verts", "quantity": "4" },
+      { "item": "Huile de sésame", "quantity": "2 c.à.s" }
+    ],
+    "ingredients_en": [
+      { "item": "Pork bones", "quantity": "1 kg" },
+      { "item": "Fresh ramen noodles", "quantity": "400 g" },
+      { "item": "Pork belly", "quantity": "500 g" },
+      { "item": "Eggs", "quantity": "4" },
+      { "item": "Soy sauce", "quantity": "100 ml" },
+      { "item": "Mirin", "quantity": "50 ml" },
+      { "item": "Fresh ginger", "quantity": "30 g" },
+      { "item": "Garlic", "quantity": "6 cloves" },
+      { "item": "Green onions", "quantity": "4" },
+      { "item": "Sesame oil", "quantity": "2 tbsp" }
+    ],
+    "steps_fr": [
+      { "text": "Blanchir les os de porc dans l'eau bouillante pendant 10 minutes, rincer.", "time": 10 },
+      { "text": "Mettre les os dans une grande marmite avec 3L d'eau, le gingembre et l'ail. Porter à ébullition.", "time": null },
+      { "text": "Laisser mijoter à feu moyen pendant 8 heures en remuant toutes les heures.", "time": 480 },
+      { "text": "Préparer le chashu : rouler la poitrine de porc, ficeler et braiser dans la sauce soja et le mirin pendant 2h.", "time": 120, "parallel": true },
+      { "text": "Cuire les œufs 6 minutes 30 pour un jaune coulant, les mariner dans la sauce soja.", "time": 7, "parallel": true },
+      { "text": "Filtrer le bouillon, assaisonner avec la sauce soja et l'huile de sésame.", "time": null },
+      { "text": "Cuire les nouilles selon les instructions, servir dans le bouillon avec le chashu, l'œuf et les oignons verts.", "time": 3 }
+    ],
+    "steps_en": [
+      { "text": "Blanch pork bones in boiling water for 10 minutes, then rinse.", "time": 10 },
+      { "text": "Place bones in a large pot with 3L water, ginger and garlic. Bring to a boil.", "time": null },
+      { "text": "Simmer on medium heat for 8 hours, stirring every hour.", "time": 480 },
+      { "text": "Prepare chashu: roll pork belly, tie and braise in soy sauce and mirin for 2 hours.", "time": 120, "parallel": true },
+      { "text": "Cook eggs for 6 min 30 sec for a runny yolk, marinate in soy sauce.", "time": 7, "parallel": true },
+      { "text": "Strain broth, season with soy sauce and sesame oil.", "time": null },
+      { "text": "Cook noodles per instructions, serve in broth with chashu, egg and green onions.", "time": 3 }
+    ]
+  },
+  {
+    "id": "tiramisu",
+    "title_fr": "Tiramisu",
+    "title_en": "Tiramisu",
+    "description_fr": "Le dessert italien classique : couches de biscuits imbibés de café et crème au mascarpone.",
+    "description_en": "The classic Italian dessert: layers of coffee-soaked ladyfingers and mascarpone cream.",
+    "image": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=600&q=75",
+    "type": "dessert",
+    "origin": "italie",
+    "prep_time": 30,
+    "cook_time": 0,
+    "servings": 8,
+    "difficulty": "moyen",
+    "tags": ["café", "mascarpone", "dessert", "sans cuisson"],
+    "ingredients_fr": [
+      { "item": "Mascarpone", "quantity": "500 g" },
+      { "item": "Œufs", "quantity": "4" },
+      { "item": "Sucre", "quantity": "100 g" },
+      { "item": "Biscuits à la cuillère", "quantity": "300 g" },
+      { "item": "Café espresso refroidi", "quantity": "300 ml" },
+      { "item": "Cacao en poudre", "quantity": "3 c.à.s" },
+      { "item": "Amaretto (optionnel)", "quantity": "2 c.à.s" }
+    ],
+    "ingredients_en": [
+      { "item": "Mascarpone", "quantity": "500 g" },
+      { "item": "Eggs", "quantity": "4" },
+      { "item": "Sugar", "quantity": "100 g" },
+      { "item": "Ladyfingers", "quantity": "300 g" },
+      { "item": "Cooled espresso", "quantity": "300 ml" },
+      { "item": "Cocoa powder", "quantity": "3 tbsp" },
+      { "item": "Amaretto (optional)", "quantity": "2 tbsp" }
+    ],
+    "steps_fr": [
+      { "text": "Séparer les blancs des jaunes. Fouetter les jaunes avec le sucre jusqu'à blanchiment.", "time": null },
+      { "text": "Incorporer le mascarpone aux jaunes sucrés.", "time": null },
+      { "text": "Monter les blancs en neige ferme et les incorporer délicatement.", "time": null },
+      { "text": "Tremper rapidement les biscuits dans le café (et l'amaretto si utilisé).", "time": null },
+      { "text": "Alterner couches de biscuits et crème dans un plat.", "time": null },
+      { "text": "Réfrigérer minimum 4 heures, idéalement une nuit.", "time": 240 },
+      { "text": "Saupoudrer de cacao avant de servir.", "time": null }
+    ],
+    "steps_en": [
+      { "text": "Separate egg whites from yolks. Whisk yolks with sugar until pale.", "time": null },
+      { "text": "Fold mascarpone into the sweetened yolks.", "time": null },
+      { "text": "Beat egg whites to stiff peaks and gently fold in.", "time": null },
+      { "text": "Quickly dip ladyfingers in coffee (and amaretto if using).", "time": null },
+      { "text": "Layer biscuits and cream alternately in a dish.", "time": null },
+      { "text": "Refrigerate at least 4 hours, ideally overnight.", "time": 240 },
+      { "text": "Dust with cocoa powder before serving.", "time": null }
+    ]
+  },
+  {
+    "id": "tacos-al-pastor",
+    "title_fr": "Tacos al Pastor",
+    "title_en": "Tacos al Pastor",
+    "description_fr": "Tacos mexicains au porc mariné à l'ananas, inspirés du shawarma libanais.",
+    "description_en": "Mexican pork tacos marinated with pineapple, inspired by Lebanese shawarma.",
+    "image": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=600&q=75",
+    "type": "plat",
+    "origin": "mexique",
+    "prep_time": 40,
+    "cook_time": 20,
+    "servings": 6,
+    "difficulty": "moyen",
+    "tags": ["porc", "ananas", "épicé", "street food"],
+    "ingredients_fr": [
+      { "item": "Échine de porc", "quantity": "800 g" },
+      { "item": "Ananas frais", "quantity": "200 g" },
+      { "item": "Piments guajillo séchés", "quantity": "4" },
+      { "item": "Achiote en pâte", "quantity": "2 c.à.s" },
+      { "item": "Vinaigre blanc", "quantity": "3 c.à.s" },
+      { "item": "Ail", "quantity": "3 gousses" },
+      { "item": "Tortillas de maïs", "quantity": "12" },
+      { "item": "Oignon blanc", "quantity": "1" },
+      { "item": "Coriandre fraîche", "quantity": "1 botte" },
+      { "item": "Citrons verts", "quantity": "3" }
+    ],
+    "ingredients_en": [
+      { "item": "Pork shoulder", "quantity": "800 g" },
+      { "item": "Fresh pineapple", "quantity": "200 g" },
+      { "item": "Dried guajillo chiles", "quantity": "4" },
+      { "item": "Achiote paste", "quantity": "2 tbsp" },
+      { "item": "White vinegar", "quantity": "3 tbsp" },
+      { "item": "Garlic", "quantity": "3 cloves" },
+      { "item": "Corn tortillas", "quantity": "12" },
+      { "item": "White onion", "quantity": "1" },
+      { "item": "Fresh cilantro", "quantity": "1 bunch" },
+      { "item": "Limes", "quantity": "3" }
+    ],
+    "steps_fr": [
+      { "text": "Réhydrater les piments dans l'eau chaude 15 minutes.", "time": 15 },
+      { "text": "Mixer les piments avec l'achiote, le vinaigre, l'ail et un peu de jus d'ananas.", "time": null },
+      { "text": "Trancher le porc finement, mariner dans la sauce au moins 2 heures.", "time": 120 },
+      { "text": "Griller le porc à feu vif avec des morceaux d'ananas.", "time": 15 },
+      { "text": "Hacher finement et servir sur les tortillas chaudes avec oignon, coriandre et citron vert.", "time": null }
+    ],
+    "steps_en": [
+      { "text": "Rehydrate chiles in hot water for 15 minutes.", "time": 15 },
+      { "text": "Blend chiles with achiote, vinegar, garlic and some pineapple juice.", "time": null },
+      { "text": "Thinly slice pork, marinate in sauce for at least 2 hours.", "time": 120 },
+      { "text": "Grill pork on high heat with pineapple chunks.", "time": 15 },
+      { "text": "Chop finely and serve on warm tortillas with onion, cilantro and lime.", "time": null }
+    ]
+  },
+  {
+    "id": "croissants",
+    "title_fr": "Croissants",
+    "title_en": "Croissants",
+    "description_fr": "Croissants feuilletés au beurre, croustillants à l'extérieur et moelleux à l'intérieur.",
+    "description_en": "Flaky butter croissants, crispy on the outside and soft inside.",
+    "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=75",
+    "type": "snack",
+    "origin": "france",
+    "prep_time": 60,
+    "cook_time": 18,
+    "servings": 12,
+    "difficulty": "difficile",
+    "tags": ["beurre", "viennoiserie", "petit-déjeuner", "feuilleté"],
+    "ingredients_fr": [
+      { "item": "Farine T55", "quantity": "500 g" },
+      { "item": "Beurre froid (tourage)", "quantity": "280 g" },
+      { "item": "Lait tiède", "quantity": "300 ml" },
+      { "item": "Sucre", "quantity": "50 g" },
+      { "item": "Sel", "quantity": "10 g" },
+      { "item": "Levure boulangère", "quantity": "10 g" },
+      { "item": "Œuf (dorure)", "quantity": "1" }
+    ],
+    "ingredients_en": [
+      { "item": "All-purpose flour", "quantity": "500 g" },
+      { "item": "Cold butter (for laminating)", "quantity": "280 g" },
+      { "item": "Warm milk", "quantity": "300 ml" },
+      { "item": "Sugar", "quantity": "50 g" },
+      { "item": "Salt", "quantity": "10 g" },
+      { "item": "Active dry yeast", "quantity": "10 g" },
+      { "item": "Egg (egg wash)", "quantity": "1" }
+    ],
+    "steps_fr": [
+      { "text": "Mélanger farine, sucre, sel, levure et lait. Pétrir 10 minutes jusqu'à obtenir une pâte lisse.", "time": 10 },
+      { "text": "Réfrigérer la détrempe 1 heure.", "time": 60 },
+      { "text": "Enchâsser le beurre dans la détrempe, effectuer 3 tours simples avec repos de 30 min entre chaque.", "time": 90 },
+      { "text": "Abaisser la pâte à 4mm d'épaisseur, découper en triangles.", "time": null },
+      { "text": "Rouler les croissants, laisser pousser 2 heures à température ambiante.", "time": 120 },
+      { "text": "Dorer à l'œuf battu, cuire à 200°C pendant 15-18 minutes.", "time": 18 }
+    ],
+    "steps_en": [
+      { "text": "Mix flour, sugar, salt, yeast and milk. Knead 10 minutes until smooth.", "time": 10 },
+      { "text": "Refrigerate dough for 1 hour.", "time": 60 },
+      { "text": "Encase butter in dough, perform 3 single folds with 30 min rest between each.", "time": 90 },
+      { "text": "Roll dough to 4mm thickness, cut into triangles.", "time": null },
+      { "text": "Shape croissants, proof for 2 hours at room temperature.", "time": 120 },
+      { "text": "Egg wash and bake at 200°C for 15-18 minutes.", "time": 18 }
+    ]
+  },
+  {
+    "id": "pad-thai",
+    "title_fr": "Pad Thaï",
+    "title_en": "Pad Thai",
+    "description_fr": "Nouilles de riz sautées au wok avec crevettes, œuf, cacahuètes et sauce tamarin.",
+    "description_en": "Stir-fried rice noodles with shrimp, egg, peanuts and tamarind sauce.",
+    "image": "https://images.unsplash.com/photo-1559314809-0d155014e29e?w=600&q=75",
+    "type": "plat",
+    "origin": "thailande",
+    "prep_time": 20,
+    "cook_time": 10,
+    "servings": 4,
+    "difficulty": "moyen",
+    "tags": ["crevettes", "nouilles", "wok", "cacahuètes", "aigre-doux"],
+    "ingredients_fr": [
+      { "item": "Nouilles de riz plates", "quantity": "250 g" },
+      { "item": "Crevettes décortiquées", "quantity": "200 g" },
+      { "item": "Œufs", "quantity": "2" },
+      { "item": "Pâte de tamarin", "quantity": "3 c.à.s" },
+      { "item": "Sauce de poisson", "quantity": "3 c.à.s" },
+      { "item": "Sucre de palme", "quantity": "2 c.à.s" },
+      { "item": "Cacahuètes concassées", "quantity": "50 g" },
+      { "item": "Germes de soja", "quantity": "100 g" },
+      { "item": "Ciboulette chinoise", "quantity": "1 botte" },
+      { "item": "Citron vert", "quantity": "2" }
+    ],
+    "ingredients_en": [
+      { "item": "Flat rice noodles", "quantity": "250 g" },
+      { "item": "Peeled shrimp", "quantity": "200 g" },
+      { "item": "Eggs", "quantity": "2" },
+      { "item": "Tamarind paste", "quantity": "3 tbsp" },
+      { "item": "Fish sauce", "quantity": "3 tbsp" },
+      { "item": "Palm sugar", "quantity": "2 tbsp" },
+      { "item": "Crushed peanuts", "quantity": "50 g" },
+      { "item": "Bean sprouts", "quantity": "100 g" },
+      { "item": "Chinese chives", "quantity": "1 bunch" },
+      { "item": "Lime", "quantity": "2" }
+    ],
+    "steps_fr": [
+      { "text": "Tremper les nouilles dans l'eau tiède 30 minutes jusqu'à ce qu'elles soient souples.", "time": 30 },
+      { "text": "Mélanger la pâte de tamarin, la sauce de poisson et le sucre pour la sauce.", "time": null },
+      { "text": "Saisir les crevettes au wok à feu très vif 1 minute de chaque côté, réserver.", "time": 2 },
+      { "text": "Brouiller les œufs dans le wok, ajouter les nouilles égouttées.", "time": null },
+      { "text": "Verser la sauce, mélanger rapidement, ajouter crevettes et germes.", "time": 3 },
+      { "text": "Servir avec cacahuètes, ciboulette et quartiers de citron vert.", "time": null }
+    ],
+    "steps_en": [
+      { "text": "Soak noodles in warm water for 30 minutes until pliable.", "time": 30 },
+      { "text": "Mix tamarind paste, fish sauce and sugar for the sauce.", "time": null },
+      { "text": "Sear shrimp in wok on very high heat, 1 minute each side, set aside.", "time": 2 },
+      { "text": "Scramble eggs in wok, add drained noodles.", "time": null },
+      { "text": "Pour sauce, toss quickly, add shrimp and sprouts.", "time": 3 },
+      { "text": "Serve with peanuts, chives and lime wedges.", "time": null }
+    ]
+  },
+  {
+    "id": "tzatziki",
+    "title_fr": "Tzatzíki",
+    "title_en": "Tzatziki",
+    "description_fr": "Sauce grecque rafraîchissante au yaourt, concombre et ail.",
+    "description_en": "Refreshing Greek yogurt dip with cucumber and garlic.",
+    "image": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=600&q=75",
+    "type": "entree",
+    "origin": "grece",
+    "prep_time": 15,
+    "cook_time": 0,
+    "servings": 6,
+    "difficulty": "facile",
+    "tags": ["yaourt", "concombre", "ail", "frais", "dip"],
+    "ingredients_fr": [
+      { "item": "Yaourt grec épais", "quantity": "500 g" },
+      { "item": "Concombre", "quantity": "1 grand" },
+      { "item": "Ail", "quantity": "2 gousses" },
+      { "item": "Huile d'olive", "quantity": "3 c.à.s" },
+      { "item": "Jus de citron", "quantity": "1 c.à.s" },
+      { "item": "Aneth frais", "quantity": "2 c.à.s" },
+      { "item": "Sel et poivre", "quantity": "au goût" }
+    ],
+    "ingredients_en": [
+      { "item": "Thick Greek yogurt", "quantity": "500 g" },
+      { "item": "Cucumber", "quantity": "1 large" },
+      { "item": "Garlic", "quantity": "2 cloves" },
+      { "item": "Olive oil", "quantity": "3 tbsp" },
+      { "item": "Lemon juice", "quantity": "1 tbsp" },
+      { "item": "Fresh dill", "quantity": "2 tbsp" },
+      { "item": "Salt and pepper", "quantity": "to taste" }
+    ],
+    "steps_fr": [
+      { "text": "Râper le concombre, le presser dans un torchon pour extraire l'eau.", "time": null },
+      { "text": "Écraser l'ail finement ou le passer au presse-ail.", "time": null },
+      { "text": "Mélanger yaourt, concombre, ail, huile d'olive, citron et aneth.", "time": null },
+      { "text": "Saler, poivrer, réfrigérer 30 minutes avant de servir.", "time": 30 }
+    ],
+    "steps_en": [
+      { "text": "Grate cucumber, squeeze in a towel to remove excess water.", "time": null },
+      { "text": "Finely crush garlic or use a garlic press.", "time": null },
+      { "text": "Mix yogurt, cucumber, garlic, olive oil, lemon and dill.", "time": null },
+      { "text": "Season with salt and pepper, refrigerate 30 minutes before serving.", "time": 30 }
+    ]
+  },
+  {
+    "id": "butter-chicken",
+    "title_fr": "Butter Chicken",
+    "title_en": "Butter Chicken",
+    "description_fr": "Poulet tendre dans une sauce tomate crémeuse au beurre et épices indiennes.",
+    "description_en": "Tender chicken in a creamy buttery tomato sauce with Indian spices.",
+    "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600&q=75",
+    "type": "plat",
+    "origin": "inde",
+    "prep_time": 25,
+    "cook_time": 35,
+    "servings": 4,
+    "difficulty": "moyen",
+    "tags": ["poulet", "crème", "épices", "tomate", "naan"],
+    "ingredients_fr": [
+      { "item": "Cuisses de poulet désossées", "quantity": "600 g" },
+      { "item": "Yaourt nature", "quantity": "150 g" },
+      { "item": "Tomates concassées", "quantity": "400 g" },
+      { "item": "Crème fraîche", "quantity": "150 ml" },
+      { "item": "Beurre", "quantity": "60 g" },
+      { "item": "Oignon", "quantity": "1 gros" },
+      { "item": "Garam masala", "quantity": "2 c.à.s" },
+      { "item": "Curcuma", "quantity": "1 c.à.c" },
+      { "item": "Piment en poudre", "quantity": "1 c.à.c" },
+      { "item": "Gingembre-ail (pâte)", "quantity": "2 c.à.s" }
+    ],
+    "ingredients_en": [
+      { "item": "Boneless chicken thighs", "quantity": "600 g" },
+      { "item": "Plain yogurt", "quantity": "150 g" },
+      { "item": "Crushed tomatoes", "quantity": "400 g" },
+      { "item": "Heavy cream", "quantity": "150 ml" },
+      { "item": "Butter", "quantity": "60 g" },
+      { "item": "Onion", "quantity": "1 large" },
+      { "item": "Garam masala", "quantity": "2 tbsp" },
+      { "item": "Turmeric", "quantity": "1 tsp" },
+      { "item": "Chili powder", "quantity": "1 tsp" },
+      { "item": "Ginger-garlic paste", "quantity": "2 tbsp" }
+    ],
+    "steps_fr": [
+      { "text": "Mariner le poulet dans le yaourt, le garam masala et le curcuma pendant 1 heure minimum.", "time": 60 },
+      { "text": "Griller le poulet mariné à feu vif jusqu'à coloration.", "time": 8 },
+      { "text": "Faire fondre le beurre, y faire revenir l'oignon et la pâte gingembre-ail.", "time": 5 },
+      { "text": "Ajouter les tomates, le piment, cuire 15 minutes puis mixer.", "time": 15 },
+      { "text": "Ajouter la crème et le poulet grillé, mijoter 10 minutes.", "time": 10 },
+      { "text": "Servir avec du riz basmati ou du naan.", "time": null }
+    ],
+    "steps_en": [
+      { "text": "Marinate chicken in yogurt, garam masala and turmeric for at least 1 hour.", "time": 60 },
+      { "text": "Grill marinated chicken on high heat until charred.", "time": 8 },
+      { "text": "Melt butter, sauté onion and ginger-garlic paste.", "time": 5 },
+      { "text": "Add tomatoes and chili, cook 15 minutes then blend.", "time": 15 },
+      { "text": "Add cream and grilled chicken, simmer 10 minutes.", "time": 10 },
+      { "text": "Serve with basmati rice or naan.", "time": null }
+    ]
+  },
+  {
+    "id": "creme-brulee",
+    "title_fr": "Crème Brûlée",
+    "title_en": "Crème Brûlée",
+    "description_fr": "Crème vanillée onctueuse avec une fine couche de caramel craquant.",
+    "description_en": "Silky vanilla custard with a thin layer of crackly caramel.",
+    "image": "https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=600&q=75",
+    "type": "dessert",
+    "origin": "france",
+    "prep_time": 15,
+    "cook_time": 45,
+    "servings": 6,
+    "difficulty": "moyen",
+    "tags": ["vanille", "crème", "caramel", "élégant"],
+    "ingredients_fr": [
+      { "item": "Crème liquide (35%)", "quantity": "500 ml" },
+      { "item": "Jaunes d'œufs", "quantity": "6" },
+      { "item": "Sucre", "quantity": "100 g" },
+      { "item": "Gousse de vanille", "quantity": "1" },
+      { "item": "Cassonade (pour caraméliser)", "quantity": "6 c.à.s" }
+    ],
+    "ingredients_en": [
+      { "item": "Heavy cream (35%)", "quantity": "500 ml" },
+      { "item": "Egg yolks", "quantity": "6" },
+      { "item": "Sugar", "quantity": "100 g" },
+      { "item": "Vanilla bean", "quantity": "1" },
+      { "item": "Brown sugar (for caramelizing)", "quantity": "6 tbsp" }
+    ],
+    "steps_fr": [
+      { "text": "Chauffer la crème avec la vanille fendue et grattée jusqu'à frémissement.", "time": 5 },
+      { "text": "Fouetter les jaunes avec le sucre jusqu'à blanchiment.", "time": null },
+      { "text": "Verser la crème chaude sur les jaunes en filet, mélanger.", "time": null },
+      { "text": "Répartir dans 6 ramequins, cuire au bain-marie à 150°C pendant 40-45 minutes.", "time": 45 },
+      { "text": "Réfrigérer au moins 4 heures.", "time": 240 },
+      { "text": "Saupoudrer de cassonade et caraméliser au chalumeau juste avant de servir.", "time": null }
+    ],
+    "steps_en": [
+      { "text": "Heat cream with split and scraped vanilla bean until simmering.", "time": 5 },
+      { "text": "Whisk yolks with sugar until pale.", "time": null },
+      { "text": "Slowly pour hot cream into yolks while stirring.", "time": null },
+      { "text": "Pour into 6 ramekins, bake in water bath at 150°C for 40-45 minutes.", "time": 45 },
+      { "text": "Refrigerate at least 4 hours.", "time": 240 },
+      { "text": "Sprinkle brown sugar and torch just before serving.", "time": null }
+    ]
+  },
+  {
+    "id": "poke-bowl",
+    "title_fr": "Poké Bowl",
+    "title_en": "Poke Bowl",
+    "description_fr": "Bol hawaïen de thon cru mariné sur riz avec légumes frais et avocat.",
+    "description_en": "Hawaiian bowl of marinated raw tuna on rice with fresh vegetables and avocado.",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=75",
+    "type": "plat",
+    "origin": "usa",
+    "prep_time": 20,
+    "cook_time": 15,
+    "servings": 2,
+    "difficulty": "facile",
+    "tags": ["thon", "riz", "avocat", "sain", "cru"],
+    "ingredients_fr": [
+      { "item": "Thon rouge sushi", "quantity": "300 g" },
+      { "item": "Riz à sushi", "quantity": "200 g" },
+      { "item": "Avocat", "quantity": "1" },
+      { "item": "Edamame", "quantity": "100 g" },
+      { "item": "Concombre", "quantity": "1" },
+      { "item": "Sauce soja", "quantity": "3 c.à.s" },
+      { "item": "Huile de sésame", "quantity": "1 c.à.s" },
+      { "item": "Graines de sésame", "quantity": "2 c.à.s" },
+      { "item": "Algue nori", "quantity": "1 feuille" }
+    ],
+    "ingredients_en": [
+      { "item": "Sushi-grade tuna", "quantity": "300 g" },
+      { "item": "Sushi rice", "quantity": "200 g" },
+      { "item": "Avocado", "quantity": "1" },
+      { "item": "Edamame", "quantity": "100 g" },
+      { "item": "Cucumber", "quantity": "1" },
+      { "item": "Soy sauce", "quantity": "3 tbsp" },
+      { "item": "Sesame oil", "quantity": "1 tbsp" },
+      { "item": "Sesame seeds", "quantity": "2 tbsp" },
+      { "item": "Nori seaweed", "quantity": "1 sheet" }
+    ],
+    "steps_fr": [
+      { "text": "Cuire le riz à sushi et l'assaisonner avec du vinaigre de riz.", "time": 15 },
+      { "text": "Couper le thon en cubes de 2cm, mariner dans la sauce soja et l'huile de sésame.", "time": null },
+      { "text": "Trancher l'avocat et le concombre.", "time": null },
+      { "text": "Monter les bols : riz, thon, avocat, concombre, edamame.", "time": null },
+      { "text": "Garnir de sésame et de nori émietté.", "time": null }
+    ],
+    "steps_en": [
+      { "text": "Cook sushi rice and season with rice vinegar.", "time": 15 },
+      { "text": "Cube tuna into 2cm pieces, marinate in soy sauce and sesame oil.", "time": null },
+      { "text": "Slice avocado and cucumber.", "time": null },
+      { "text": "Assemble bowls: rice, tuna, avocado, cucumber, edamame.", "time": null },
+      { "text": "Top with sesame seeds and crumbled nori.", "time": null }
+    ]
+  },
+  {
+    "id": "mojito",
+    "title_fr": "Mojito",
+    "title_en": "Mojito",
+    "description_fr": "Cocktail cubain rafraîchissant au rhum, menthe fraîche et citron vert.",
+    "description_en": "Refreshing Cuban cocktail with rum, fresh mint and lime.",
+    "image": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=600&q=75",
+    "type": "boisson",
+    "origin": "cuba",
+    "prep_time": 5,
+    "cook_time": 0,
+    "servings": 1,
+    "difficulty": "facile",
+    "tags": ["rhum", "menthe", "citron vert", "cocktail", "rafraîchissant"],
+    "ingredients_fr": [
+      { "item": "Rhum blanc", "quantity": "50 ml" },
+      { "item": "Menthe fraîche", "quantity": "10 feuilles" },
+      { "item": "Citron vert", "quantity": "1" },
+      { "item": "Sucre de canne", "quantity": "2 c.à.c" },
+      { "item": "Eau gazeuse", "quantity": "100 ml" },
+      { "item": "Glace pilée", "quantity": "1 verre" }
+    ],
+    "ingredients_en": [
+      { "item": "White rum", "quantity": "50 ml" },
+      { "item": "Fresh mint", "quantity": "10 leaves" },
+      { "item": "Lime", "quantity": "1" },
+      { "item": "Cane sugar", "quantity": "2 tsp" },
+      { "item": "Sparkling water", "quantity": "100 ml" },
+      { "item": "Crushed ice", "quantity": "1 glass" }
+    ],
+    "steps_fr": [
+      { "text": "Presser le citron vert dans un verre, ajouter le sucre.", "time": null },
+      { "text": "Ajouter la menthe et écraser légèrement avec un pilon (sans broyer).", "time": null },
+      { "text": "Ajouter la glace pilée et le rhum.", "time": null },
+      { "text": "Compléter avec l'eau gazeuse, mélanger doucement.", "time": null },
+      { "text": "Décorer avec un brin de menthe et une rondelle de citron vert.", "time": null }
+    ],
+    "steps_en": [
+      { "text": "Squeeze lime into a glass, add sugar.", "time": null },
+      { "text": "Add mint and gently muddle (don't crush).", "time": null },
+      { "text": "Add crushed ice and rum.", "time": null },
+      { "text": "Top with sparkling water, stir gently.", "time": null },
+      { "text": "Garnish with a mint sprig and lime wheel.", "time": null }
+    ]
+  },
+  {
+    "id": "bruschetta",
+    "title_fr": "Bruschetta",
+    "title_en": "Bruschetta",
+    "description_fr": "Tartines italiennes grillées garnies de tomates fraîches, basilic et ail.",
+    "description_en": "Italian grilled bread topped with fresh tomatoes, basil and garlic.",
+    "image": "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=600&q=75",
+    "type": "entree",
+    "origin": "italie",
+    "prep_time": 10,
+    "cook_time": 5,
+    "servings": 4,
+    "difficulty": "facile",
+    "tags": ["tomate", "basilic", "pain", "ail", "été"],
+    "ingredients_fr": [
+      { "item": "Pain ciabatta", "quantity": "1" },
+      { "item": "Tomates mûres", "quantity": "4" },
+      { "item": "Basilic frais", "quantity": "1 botte" },
+      { "item": "Ail", "quantity": "2 gousses" },
+      { "item": "Huile d'olive extra vierge", "quantity": "4 c.à.s" },
+      { "item": "Vinaigre balsamique", "quantity": "1 c.à.s" },
+      { "item": "Sel et poivre", "quantity": "au goût" }
+    ],
+    "ingredients_en": [
+      { "item": "Ciabatta bread", "quantity": "1" },
+      { "item": "Ripe tomatoes", "quantity": "4" },
+      { "item": "Fresh basil", "quantity": "1 bunch" },
+      { "item": "Garlic", "quantity": "2 cloves" },
+      { "item": "Extra virgin olive oil", "quantity": "4 tbsp" },
+      { "item": "Balsamic vinegar", "quantity": "1 tbsp" },
+      { "item": "Salt and pepper", "quantity": "to taste" }
+    ],
+    "steps_fr": [
+      { "text": "Couper les tomates en petits dés, mélanger avec le basilic ciselé, l'huile et le vinaigre.", "time": null },
+      { "text": "Saler, poivrer, laisser mariner 10 minutes.", "time": 10 },
+      { "text": "Trancher le pain, griller au four ou au grill jusqu'à doré.", "time": 5 },
+      { "text": "Frotter les tranches chaudes avec la gousse d'ail coupée.", "time": null },
+      { "text": "Garnir généreusement de mélange tomate-basilic et servir immédiatement.", "time": null }
+    ],
+    "steps_en": [
+      { "text": "Dice tomatoes, mix with chopped basil, oil and vinegar.", "time": null },
+      { "text": "Season, let marinate 10 minutes.", "time": 10 },
+      { "text": "Slice bread, toast in oven or on grill until golden.", "time": 5 },
+      { "text": "Rub warm slices with cut garlic clove.", "time": null },
+      { "text": "Top generously with tomato-basil mix and serve immediately.", "time": null }
+    ]
+  },
+  {
+    "id": "bibimbap",
+    "title_fr": "Bibimbap",
+    "title_en": "Bibimbap",
+    "description_fr": "Bol coréen de riz garni de légumes sautés, viande et œuf, servi avec gochujang.",
+    "description_en": "Korean rice bowl topped with sautéed vegetables, meat and egg, served with gochujang.",
+    "image": "https://images.unsplash.com/photo-1553163147-622ab57be1c7?w=600&q=75",
+    "type": "plat",
+    "origin": "coree",
+    "prep_time": 30,
+    "cook_time": 20,
+    "servings": 4,
+    "difficulty": "moyen",
+    "tags": ["riz", "légumes", "bœuf", "œuf", "gochujang"],
+    "ingredients_fr": [
+      { "item": "Riz blanc", "quantity": "400 g" },
+      { "item": "Bœuf émincé", "quantity": "200 g" },
+      { "item": "Carottes", "quantity": "2" },
+      { "item": "Courgettes", "quantity": "1" },
+      { "item": "Épinards", "quantity": "200 g" },
+      { "item": "Champignons shiitake", "quantity": "100 g" },
+      { "item": "Œufs", "quantity": "4" },
+      { "item": "Gochujang", "quantity": "4 c.à.s" },
+      { "item": "Huile de sésame", "quantity": "2 c.à.s" },
+      { "item": "Sauce soja", "quantity": "2 c.à.s" }
+    ],
+    "ingredients_en": [
+      { "item": "White rice", "quantity": "400 g" },
+      { "item": "Sliced beef", "quantity": "200 g" },
+      { "item": "Carrots", "quantity": "2" },
+      { "item": "Zucchini", "quantity": "1" },
+      { "item": "Spinach", "quantity": "200 g" },
+      { "item": "Shiitake mushrooms", "quantity": "100 g" },
+      { "item": "Eggs", "quantity": "4" },
+      { "item": "Gochujang", "quantity": "4 tbsp" },
+      { "item": "Sesame oil", "quantity": "2 tbsp" },
+      { "item": "Soy sauce", "quantity": "2 tbsp" }
+    ],
+    "steps_fr": [
+      { "text": "Cuire le riz et le garder chaud.", "time": 15, "parallel": true },
+      { "text": "Mariner le bœuf dans la sauce soja et l'huile de sésame 15 minutes.", "time": 15, "parallel": true },
+      { "text": "Sauter chaque légume séparément avec un peu d'huile de sésame.", "time": 15 },
+      { "text": "Saisir le bœuf à feu vif.", "time": 3 },
+      { "text": "Frire un œuf au plat par bol.", "time": 2 },
+      { "text": "Assembler : riz au fond, légumes et bœuf disposés en sections, œuf au centre.", "time": null },
+      { "text": "Servir avec le gochujang à côté. Mélanger avant de manger.", "time": null }
+    ],
+    "steps_en": [
+      { "text": "Cook rice and keep warm.", "time": 15, "parallel": true },
+      { "text": "Marinate beef in soy sauce and sesame oil for 15 minutes.", "time": 15, "parallel": true },
+      { "text": "Sauté each vegetable separately with a little sesame oil.", "time": 15 },
+      { "text": "Sear beef on high heat.", "time": 3 },
+      { "text": "Fry one sunny-side-up egg per bowl.", "time": 2 },
+      { "text": "Assemble: rice at bottom, veggies and beef arranged in sections, egg on top.", "time": null },
+      { "text": "Serve with gochujang on the side. Mix before eating.", "time": null }
+    ]
+  },
+  {
+    "id": "tajine-agneau",
+    "title_fr": "Tajine d'Agneau aux Pruneaux",
+    "title_en": "Lamb Tagine with Prunes",
+    "description_fr": "Ragoût marocain d'agneau mijoté avec pruneaux, amandes et épices douces.",
+    "description_en": "Moroccan lamb stew simmered with prunes, almonds and warm spices.",
+    "image": "https://images.unsplash.com/photo-1511690743698-d9d85f2f0571?w=600&q=75",
+    "type": "plat",
+    "origin": "maroc",
+    "prep_time": 20,
+    "cook_time": 120,
+    "servings": 6,
+    "difficulty": "moyen",
+    "tags": ["agneau", "pruneaux", "épices", "mijoté", "amandes"],
+    "ingredients_fr": [
+      { "item": "Épaule d'agneau", "quantity": "1 kg" },
+      { "item": "Pruneaux dénoyautés", "quantity": "200 g" },
+      { "item": "Oignons", "quantity": "2" },
+      { "item": "Amandes effilées", "quantity": "50 g" },
+      { "item": "Miel", "quantity": "3 c.à.s" },
+      { "item": "Cannelle", "quantity": "2 bâtons" },
+      { "item": "Ras el hanout", "quantity": "2 c.à.s" },
+      { "item": "Safran", "quantity": "1 pincée" },
+      { "item": "Huile d'olive", "quantity": "3 c.à.s" },
+      { "item": "Coriandre fraîche", "quantity": "1 botte" }
+    ],
+    "ingredients_en": [
+      { "item": "Lamb shoulder", "quantity": "1 kg" },
+      { "item": "Pitted prunes", "quantity": "200 g" },
+      { "item": "Onions", "quantity": "2" },
+      { "item": "Sliced almonds", "quantity": "50 g" },
+      { "item": "Honey", "quantity": "3 tbsp" },
+      { "item": "Cinnamon", "quantity": "2 sticks" },
+      { "item": "Ras el hanout", "quantity": "2 tbsp" },
+      { "item": "Saffron", "quantity": "1 pinch" },
+      { "item": "Olive oil", "quantity": "3 tbsp" },
+      { "item": "Fresh cilantro", "quantity": "1 bunch" }
+    ],
+    "steps_fr": [
+      { "text": "Couper l'agneau en gros morceaux, faire dorer dans l'huile d'olive.", "time": 8 },
+      { "text": "Ajouter les oignons émincés, le ras el hanout, le safran et la cannelle. Cuire 5 minutes.", "time": 5 },
+      { "text": "Couvrir d'eau, porter à ébullition puis mijoter 1h30 à couvert.", "time": 90 },
+      { "text": "Ajouter les pruneaux et le miel, poursuivre 30 minutes.", "time": 30 },
+      { "text": "Torréfier les amandes à sec dans une poêle.", "time": 3 },
+      { "text": "Servir garni d'amandes et de coriandre fraîche avec de la semoule.", "time": null }
+    ],
+    "steps_en": [
+      { "text": "Cut lamb into large pieces, brown in olive oil.", "time": 8 },
+      { "text": "Add sliced onions, ras el hanout, saffron and cinnamon. Cook 5 minutes.", "time": 5 },
+      { "text": "Cover with water, bring to boil then simmer covered for 1h30.", "time": 90 },
+      { "text": "Add prunes and honey, continue 30 minutes.", "time": 30 },
+      { "text": "Dry-toast almonds in a pan.", "time": 3 },
+      { "text": "Serve topped with almonds and fresh cilantro alongside couscous.", "time": null }
+    ]
+  },
+  {
+    "id": "mochi",
+    "title_fr": "Mochi (Daifuku)",
+    "title_en": "Mochi (Daifuku)",
+    "description_fr": "Petits gâteaux japonais de riz gluant fourrés à la pâte de haricots rouges.",
+    "description_en": "Japanese glutinous rice cakes filled with sweet red bean paste.",
+    "image": "https://images.unsplash.com/photo-1631206616902-710b0b5ad6dc?w=600&q=75",
+    "type": "dessert",
+    "origin": "japon",
+    "prep_time": 20,
+    "cook_time": 5,
+    "servings": 12,
+    "difficulty": "moyen",
+    "tags": ["riz gluant", "haricots rouges", "anko", "sucré"],
+    "ingredients_fr": [
+      { "item": "Farine de riz gluant (mochiko)", "quantity": "200 g" },
+      { "item": "Sucre", "quantity": "80 g" },
+      { "item": "Eau", "quantity": "250 ml" },
+      { "item": "Pâte de haricots rouges (anko)", "quantity": "200 g" },
+      { "item": "Fécule de maïs (pour le plan de travail)", "quantity": "50 g" }
+    ],
+    "ingredients_en": [
+      { "item": "Glutinous rice flour (mochiko)", "quantity": "200 g" },
+      { "item": "Sugar", "quantity": "80 g" },
+      { "item": "Water", "quantity": "250 ml" },
+      { "item": "Red bean paste (anko)", "quantity": "200 g" },
+      { "item": "Cornstarch (for dusting)", "quantity": "50 g" }
+    ],
+    "steps_fr": [
+      { "text": "Mélanger la farine de riz, le sucre et l'eau dans un bol allant au micro-ondes.", "time": null },
+      { "text": "Cuire au micro-ondes 2 minutes, mélanger, puis 1 minute de plus. La pâte doit être translucide.", "time": 3 },
+      { "text": "Former 12 boules de pâte anko (environ 15g chacune).", "time": null },
+      { "text": "Sur un plan féculent, diviser la pâte mochi en 12 portions.", "time": null },
+      { "text": "Aplatir chaque portion, placer une boule d'anko au centre, refermer et rouler.", "time": null },
+      { "text": "Saupoudrer de fécule pour éviter que ça colle. Servir le jour même.", "time": null }
+    ],
+    "steps_en": [
+      { "text": "Mix rice flour, sugar and water in a microwave-safe bowl.", "time": null },
+      { "text": "Microwave 2 minutes, stir, then 1 more minute. Dough should be translucent.", "time": 3 },
+      { "text": "Form 12 balls of anko paste (about 15g each).", "time": null },
+      { "text": "On a cornstarch-dusted surface, divide mochi dough into 12 portions.", "time": null },
+      { "text": "Flatten each portion, place anko ball in center, seal and roll.", "time": null },
+      { "text": "Dust with cornstarch to prevent sticking. Serve same day.", "time": null }
+    ]
+  },
+  {
+    "id": "guacamole",
+    "title_fr": "Guacamole",
+    "title_en": "Guacamole",
+    "description_fr": "Dip mexicain crémeux à l'avocat, citron vert, coriandre et piment.",
+    "description_en": "Creamy Mexican avocado dip with lime, cilantro and chili.",
+    "image": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=600&q=75",
+    "type": "entree",
+    "origin": "mexique",
+    "prep_time": 10,
+    "cook_time": 0,
+    "servings": 4,
+    "difficulty": "facile",
+    "tags": ["avocat", "citron vert", "coriandre", "piment", "dip"],
+    "ingredients_fr": [
+      { "item": "Avocats mûrs", "quantity": "3" },
+      { "item": "Citron vert", "quantity": "2" },
+      { "item": "Oignon rouge", "quantity": "1/2" },
+      { "item": "Tomate", "quantity": "1" },
+      { "item": "Coriandre fraîche", "quantity": "1/2 botte" },
+      { "item": "Piment jalapeño", "quantity": "1" },
+      { "item": "Sel", "quantity": "au goût" }
+    ],
+    "ingredients_en": [
+      { "item": "Ripe avocados", "quantity": "3" },
+      { "item": "Lime", "quantity": "2" },
+      { "item": "Red onion", "quantity": "1/2" },
+      { "item": "Tomato", "quantity": "1" },
+      { "item": "Fresh cilantro", "quantity": "1/2 bunch" },
+      { "item": "Jalapeño pepper", "quantity": "1" },
+      { "item": "Salt", "quantity": "to taste" }
+    ],
+    "steps_fr": [
+      { "text": "Couper les avocats en deux, retirer le noyau, écraser la chair à la fourchette.", "time": null },
+      { "text": "Ajouter le jus de citron vert immédiatement pour éviter l'oxydation.", "time": null },
+      { "text": "Ciseler finement l'oignon, la tomate (épépinée) et le piment.", "time": null },
+      { "text": "Mélanger tous les ingrédients, ajouter la coriandre ciselée.", "time": null },
+      { "text": "Saler et servir avec des tortilla chips.", "time": null }
+    ],
+    "steps_en": [
+      { "text": "Halve avocados, remove pit, mash flesh with a fork.", "time": null },
+      { "text": "Add lime juice immediately to prevent browning.", "time": null },
+      { "text": "Finely dice onion, seeded tomato and pepper.", "time": null },
+      { "text": "Mix all ingredients, add chopped cilantro.", "time": null },
+      { "text": "Season with salt and serve with tortilla chips.", "time": null }
+    ]
+  },
+  {
+    "id": "pho-bo",
+    "title_fr": "Phở Bò",
+    "title_en": "Pho Bo",
+    "description_fr": "Soupe vietnamienne au bœuf avec nouilles de riz, herbes fraîches et bouillon parfumé.",
+    "description_en": "Vietnamese beef soup with rice noodles, fresh herbs and fragrant broth.",
+    "image": "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=600&q=75",
+    "type": "plat",
+    "origin": "vietnam",
+    "prep_time": 20,
+    "cook_time": 180,
+    "servings": 4,
+    "difficulty": "moyen",
+    "tags": ["bœuf", "bouillon", "nouilles", "herbes", "anis étoilé"],
+    "ingredients_fr": [
+      { "item": "Os à moelle de bœuf", "quantity": "1 kg" },
+      { "item": "Bavette de bœuf (très fine)", "quantity": "300 g" },
+      { "item": "Nouilles de riz plates", "quantity": "400 g" },
+      { "item": "Anis étoilé", "quantity": "3" },
+      { "item": "Bâton de cannelle", "quantity": "1" },
+      { "item": "Gingembre", "quantity": "50 g" },
+      { "item": "Oignon", "quantity": "2" },
+      { "item": "Sauce de poisson", "quantity": "3 c.à.s" },
+      { "item": "Germes de soja", "quantity": "150 g" },
+      { "item": "Basilic thaï, menthe, coriandre", "quantity": "1 botte chacun" }
+    ],
+    "ingredients_en": [
+      { "item": "Beef marrow bones", "quantity": "1 kg" },
+      { "item": "Beef flank (very thin slices)", "quantity": "300 g" },
+      { "item": "Flat rice noodles", "quantity": "400 g" },
+      { "item": "Star anise", "quantity": "3" },
+      { "item": "Cinnamon stick", "quantity": "1" },
+      { "item": "Ginger", "quantity": "50 g" },
+      { "item": "Onion", "quantity": "2" },
+      { "item": "Fish sauce", "quantity": "3 tbsp" },
+      { "item": "Bean sprouts", "quantity": "150 g" },
+      { "item": "Thai basil, mint, cilantro", "quantity": "1 bunch each" }
+    ],
+    "steps_fr": [
+      { "text": "Griller l'oignon et le gingembre coupés en deux à la flamme ou au four jusqu'à noircissement.", "time": 10 },
+      { "text": "Blanchir les os 5 minutes, rincer, mettre dans une marmite avec 3L d'eau.", "time": 5 },
+      { "text": "Ajouter oignon grillé, gingembre, anis et cannelle. Mijoter 3 heures.", "time": 180 },
+      { "text": "Filtrer le bouillon, assaisonner avec la sauce de poisson.", "time": null },
+      { "text": "Cuire les nouilles, répartir dans les bols.", "time": 3 },
+      { "text": "Disposer la bavette crue tranchée finement sur les nouilles, verser le bouillon brûlant.", "time": null },
+      { "text": "Servir avec les herbes, germes de soja et citron vert à part.", "time": null }
+    ],
+    "steps_en": [
+      { "text": "Char onion and ginger halves over flame or under broiler until blackened.", "time": 10 },
+      { "text": "Blanch bones 5 minutes, rinse, place in pot with 3L water.", "time": 5 },
+      { "text": "Add charred onion, ginger, star anise and cinnamon. Simmer 3 hours.", "time": 180 },
+      { "text": "Strain broth, season with fish sauce.", "time": null },
+      { "text": "Cook noodles, divide into bowls.", "time": 3 },
+      { "text": "Arrange thinly sliced raw flank on noodles, pour boiling broth over.", "time": null },
+      { "text": "Serve with herbs, bean sprouts and lime wedges on the side.", "time": null }
+    ]
+  },
+  {
+    "id": "baklava",
+    "title_fr": "Baklava",
+    "title_en": "Baklava",
+    "description_fr": "Pâtisserie feuilletée turque aux noix et pistaches, imbibée de sirop au miel.",
+    "description_en": "Turkish layered pastry with walnuts and pistachios, soaked in honey syrup.",
+    "image": "https://images.unsplash.com/photo-1519676867240-f03562e64571?w=600&q=75",
+    "type": "dessert",
+    "origin": "turquie",
+    "prep_time": 30,
+    "cook_time": 45,
+    "servings": 20,
+    "difficulty": "moyen",
+    "tags": ["noix", "pistaches", "miel", "filo", "sirop"],
+    "ingredients_fr": [
+      { "item": "Pâte filo", "quantity": "500 g" },
+      { "item": "Noix concassées", "quantity": "200 g" },
+      { "item": "Pistaches concassées", "quantity": "100 g" },
+      { "item": "Beurre fondu", "quantity": "250 g" },
+      { "item": "Sucre", "quantity": "200 g" },
+      { "item": "Eau", "quantity": "200 ml" },
+      { "item": "Miel", "quantity": "100 g" },
+      { "item": "Jus de citron", "quantity": "1 c.à.s" },
+      { "item": "Eau de rose (optionnel)", "quantity": "1 c.à.c" }
+    ],
+    "ingredients_en": [
+      { "item": "Filo pastry", "quantity": "500 g" },
+      { "item": "Crushed walnuts", "quantity": "200 g" },
+      { "item": "Crushed pistachios", "quantity": "100 g" },
+      { "item": "Melted butter", "quantity": "250 g" },
+      { "item": "Sugar", "quantity": "200 g" },
+      { "item": "Water", "quantity": "200 ml" },
+      { "item": "Honey", "quantity": "100 g" },
+      { "item": "Lemon juice", "quantity": "1 tbsp" },
+      { "item": "Rose water (optional)", "quantity": "1 tsp" }
+    ],
+    "steps_fr": [
+      { "text": "Beurrer un plat, superposer 8 feuilles de filo en badigeonnant chacune de beurre fondu.", "time": null },
+      { "text": "Étaler une couche de noix et pistaches mélangées.", "time": null },
+      { "text": "Répéter : 4 feuilles beurrées + noix, jusqu'à épuisement. Terminer par 8 feuilles.", "time": null },
+      { "text": "Découper en losanges avec un couteau bien aiguisé.", "time": null },
+      { "text": "Cuire à 170°C pendant 45 minutes jusqu'à doré.", "time": 45 },
+      { "text": "Pendant ce temps, préparer le sirop : bouillir eau et sucre 10 min, ajouter miel et citron.", "time": 10 },
+      { "text": "Verser le sirop froid sur le baklava chaud. Laisser absorber 4 heures.", "time": 240 }
+    ],
+    "steps_en": [
+      { "text": "Butter a pan, layer 8 filo sheets brushing each with melted butter.", "time": null },
+      { "text": "Spread a layer of mixed walnuts and pistachios.", "time": null },
+      { "text": "Repeat: 4 buttered sheets + nuts, until done. End with 8 sheets.", "time": null },
+      { "text": "Cut into diamond shapes with a sharp knife.", "time": null },
+      { "text": "Bake at 170°C for 45 minutes until golden.", "time": 45 },
+      { "text": "Meanwhile, make syrup: boil water and sugar 10 min, add honey and lemon.", "time": 10 },
+      { "text": "Pour cold syrup over hot baklava. Let soak 4 hours.", "time": 240 }
+    ]
+  },
+  {
+    "id": "fish-and-chips",
+    "title_fr": "Fish and Chips",
+    "title_en": "Fish and Chips",
+    "description_fr": "Poisson pané croustillant servi avec des frites épaisses, à l'anglaise.",
+    "description_en": "Crispy battered fish served with thick-cut chips, British style.",
+    "image": "https://images.unsplash.com/photo-1579208030886-b1f5b7b0a9e5?w=600&q=75",
+    "type": "plat",
+    "origin": "angleterre",
+    "prep_time": 20,
+    "cook_time": 25,
+    "servings": 4,
+    "difficulty": "moyen",
+    "tags": ["poisson", "frites", "bière", "friture", "british"],
+    "ingredients_fr": [
+      { "item": "Filets de cabillaud", "quantity": "4 (200g chacun)" },
+      { "item": "Farine", "quantity": "200 g" },
+      { "item": "Bière blonde froide", "quantity": "250 ml" },
+      { "item": "Levure chimique", "quantity": "1 c.à.c" },
+      { "item": "Pommes de terre (Maris Piper ou Bintje)", "quantity": "1 kg" },
+      { "item": "Huile de friture", "quantity": "2 L" },
+      { "item": "Sel et poivre", "quantity": "au goût" },
+      { "item": "Citron", "quantity": "2" }
+    ],
+    "ingredients_en": [
+      { "item": "Cod fillets", "quantity": "4 (200g each)" },
+      { "item": "Flour", "quantity": "200 g" },
+      { "item": "Cold lager beer", "quantity": "250 ml" },
+      { "item": "Baking powder", "quantity": "1 tsp" },
+      { "item": "Potatoes (Maris Piper or Russet)", "quantity": "1 kg" },
+      { "item": "Frying oil", "quantity": "2 L" },
+      { "item": "Salt and pepper", "quantity": "to taste" },
+      { "item": "Lemon", "quantity": "2" }
+    ],
+    "steps_fr": [
+      { "text": "Couper les pommes de terre en bâtonnets épais (1.5cm), rincer et sécher.", "time": null },
+      { "text": "Première friture des chips à 140°C pendant 8 minutes. Égoutter.", "time": 8 },
+      { "text": "Mélanger farine, levure, sel. Ajouter la bière froide progressivement pour une pâte lisse.", "time": null },
+      { "text": "Fariner les filets, les plonger dans la pâte, frire à 180°C 6-8 minutes.", "time": 8 },
+      { "text": "Deuxième friture des chips à 190°C 3-4 minutes jusqu'à doré.", "time": 4 },
+      { "text": "Saler immédiatement, servir avec citron et vinaigre de malt.", "time": null }
+    ],
+    "steps_en": [
+      { "text": "Cut potatoes into thick chips (1.5cm), rinse and dry.", "time": null },
+      { "text": "First fry chips at 140°C for 8 minutes. Drain.", "time": 8 },
+      { "text": "Mix flour, baking powder, salt. Gradually add cold beer for a smooth batter.", "time": null },
+      { "text": "Flour fillets, dip in batter, fry at 180°C for 6-8 minutes.", "time": 8 },
+      { "text": "Second fry chips at 190°C for 3-4 minutes until golden.", "time": 4 },
+      { "text": "Salt immediately, serve with lemon and malt vinegar.", "time": null }
+    ]
+  },
+  {
+    "id": "ceviche",
+    "title_fr": "Ceviche de Poisson",
+    "title_en": "Fish Ceviche",
+    "description_fr": "Poisson blanc mariné dans le citron vert avec oignon rouge, coriandre et piment.",
+    "description_en": "White fish marinated in lime juice with red onion, cilantro and chili.",
+    "image": "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?w=600&q=75",
+    "type": "entree",
+    "origin": "mexique",
+    "prep_time": 20,
+    "cook_time": 0,
+    "servings": 4,
+    "difficulty": "facile",
+    "tags": ["poisson", "citron vert", "cru", "frais", "léger"],
+    "ingredients_fr": [
+      { "item": "Filet de bar ou daurade (très frais)", "quantity": "400 g" },
+      { "item": "Citrons verts", "quantity": "6" },
+      { "item": "Oignon rouge", "quantity": "1" },
+      { "item": "Tomate", "quantity": "1" },
+      { "item": "Coriandre fraîche", "quantity": "1 botte" },
+      { "item": "Piment serrano", "quantity": "1" },
+      { "item": "Avocat", "quantity": "1" },
+      { "item": "Sel", "quantity": "au goût" }
+    ],
+    "ingredients_en": [
+      { "item": "Sea bass or sea bream fillet (very fresh)", "quantity": "400 g" },
+      { "item": "Limes", "quantity": "6" },
+      { "item": "Red onion", "quantity": "1" },
+      { "item": "Tomato", "quantity": "1" },
+      { "item": "Fresh cilantro", "quantity": "1 bunch" },
+      { "item": "Serrano pepper", "quantity": "1" },
+      { "item": "Avocado", "quantity": "1" },
+      { "item": "Salt", "quantity": "to taste" }
+    ],
+    "steps_fr": [
+      { "text": "Couper le poisson en dés de 1.5cm.", "time": null },
+      { "text": "Presser tous les citrons verts, verser sur le poisson. Mariner 20-30 minutes au frais.", "time": 30 },
+      { "text": "Émincer finement l'oignon rouge, le faire tremper dans l'eau glacée 5 min pour adoucir.", "time": 5 },
+      { "text": "Couper la tomate en dés, émincer le piment et la coriandre.", "time": null },
+      { "text": "Égoutter légèrement le poisson, mélanger avec tous les ingrédients.", "time": null },
+      { "text": "Servir immédiatement avec des tranches d'avocat et des tostadas.", "time": null }
+    ],
+    "steps_en": [
+      { "text": "Cut fish into 1.5cm cubes.", "time": null },
+      { "text": "Squeeze all limes, pour over fish. Marinate 20-30 minutes in fridge.", "time": 30 },
+      { "text": "Thinly slice red onion, soak in ice water 5 min to mellow.", "time": 5 },
+      { "text": "Dice tomato, slice pepper and cilantro.", "time": null },
+      { "text": "Lightly drain fish, mix with all ingredients.", "time": null },
+      { "text": "Serve immediately with avocado slices and tostadas.", "time": null }
+    ]
+  }
+]

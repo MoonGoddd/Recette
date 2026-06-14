@@ -125,12 +125,8 @@
 - [ ] Accessibilité (ARIA labels, contraste, navigation clavier)
 - [ ] Optimisation perf
 
-### Phase 7 — Git & Déploiement
-- [ ] Init repo Git local
-- [ ] Créer repo GitHub MoonGoddd/Recette
-- [ ] .gitignore (node_modules, .idea)
-- [ ] Push initial
-- [ ] README.md
+### Phase 7 — Git & Déploiement ✅
+- [x] Repo créé et push sur https://github.com/MoonGoddd/Recette
 
 ---
 
@@ -236,47 +232,183 @@ Tu vas créer un site statique de recettes de cuisine du monde. Voici les fichie
 STACK : HTML + Tailwind CSS v4 (@tailwindcss/cli) + JavaScript vanilla. Zero framework.
 
 STRUCTURE :
-- public/ contient tout le contenu servi (html, css compilé, js, data, assets)
-- css/input.css est la source Tailwind avec @theme et @source "../public"
-- package.json avec scripts: build (compile css), dev (watch + serve via concurrently), serve
+Recette/
+├── public/                     # Dossier servi
+│   ├── index.html              # Homepage
+│   ├── recipe.html             # Détail recette
+│   ├── category.html           # Page catégorie
+│   ├── serve.json              # Config serve (cleanUrls:false, rewrite / → /index.html)
+│   ├── css/style.css           # Output Tailwind compilé minifié
+│   ├── js/
+│   │   ├── app.js              # Carrousel, filtres, grille homepage
+│   │   ├── recipe-detail.js    # Calculateur portions, accordéon, étapes parallèles, timer
+│   │   ├── category.js         # Filtre par query param
+│   │   ├── search.js           # Recherche instantanée multi-champs
+│   │   ├── timer.js            # Multi-timers, Web Audio notification
+│   │   └── i18n.js             # Bilingue FR/EN, localStorage, événement langchange
+│   └── data/
+│       ├── recipes.json        # 18 recettes bilingues complètes
+│       └── translations.json   # ~60 clés FR/EN
+├── css/input.css               # Source Tailwind : @import, @source, @theme, @media print
+├── plus/
+│   └── DESIGN2.md              # Design system Nike de référence
+├── package.json                # Scripts: build, dev (watch+serve), serve
+├── DECISIONS.md
+└── rapport_recette.md
+
+SCRIPTS NPM :
+- "build": compile css/input.css → public/css/style.css (minifié)
+- "dev": concurrently watch CSS + serve public sur port 3000
+- "serve": npx serve public -l 3000
+- serve.json dans public/ avec {"cleanUrls": false, "rewrites": [{"source":"/","destination":"/index.html"}]}
 
 DESIGN (Nike-inspired) :
-- Fonts : Bebas Neue (display, uppercase, titres géants) + Inter (body, UI)
-- Palette : ink #111, canvas #fff, cloud #f5f5f5, primary #ff385c, charcoal #39393b, mute #707072
-- Hero full-bleed 85vh + gradient overlay + titre clamp(3rem,10vw,7rem)
-- Sections alternées noir/blanc
-- Carrousel horizontal "Recettes du moment" (section dark)
-- Grille mosaïque (aspect-square, gap-1, overlay gradient, titre Bebas en bas)
-- Section catégories : 4 tiles portrait (aspect 4:5) sur fond noir
-- Filtres : pills rounded-full noir/blanc style Nike
-- Nav fixe glassmorphism (backdrop-blur-md, bg-canvas/90)
-- Zero shadow. Profondeur = photo + gradient + contraste noir/blanc
-- Timer widget : fixed bottom-right, fond ink
+- Fonts Google : Bebas Neue (display, TOUJOURS uppercase, titres géants) + Inter (body, UI, tout le reste)
+- Palette : ink #111111, canvas #ffffff, cloud #f5f5f5, primary #ff385c, primary-active #e00b41, charcoal #39393b, mute #707072, stone #9e9ea0, hairline #cacacb, hairline-soft #e5e5e5, on-primary #fff, on-dark #fff
+- Hero full-bleed 85vh + gradient overlay (transparent → noir 70%) + titre clamp(3rem,10vw,7rem)
+- Sections alternées : section-dark (bg ink, text on-dark) / section light (bg canvas)
+- Carrousel horizontal "Recettes du moment" sur section dark, scroll-snap-type: x mandatory, cards 280-300px width aspect 4:5
+- Grille recettes : aspect-square, gap-1 (mosaïque), overlay gradient from-black/70, titre Bebas en bas
+- Section catégories : 4 tiles portrait aspect-[4/5] gap-1 sur fond noir, hover scale 105%
+- Filtres : pills rounded-full, bg-ink quand actif (texte on-primary), border-hairline quand inactif
+- Nav fixe : bg-canvas/90 backdrop-blur-md, border-b border-hairline-soft, h-16
+- Zero shadow partout. Profondeur = overlays gradient + contraste sections noir/blanc
+- Timer widget : fixed bottom-6 right-6, bg-ink, border-charcoal, text on-dark
 
 PAGES :
-1. index.html : nav + hero + carrousel + filtres (type + origine) + grille + catégories + footer
-2. recipe.html : hero 60vh + meta badges (bande noire) + contenu 2 colonnes (ingrédients | étapes) + timer
-3. category.html : header dark + titre géant + grille filtrée
 
-FONCTIONNALITÉS JS :
-- search.js : recherche instantanée sur titre, description, ingredients, tags, origin, type
-- timer.js : multi-instances, Web Audio API (800Hz, 300ms), widget flottant
-- i18n.js : toggle FR/EN, localStorage, événement langchange, re-render dynamique
-- app.js : carrousel (scroll snap, boutons prev/next), filtres catégorie/origine, render grille
-- recipe-detail.js : groupSteps() pour étapes parallèles (parallel: true), rendu intelligent
-- category.js : filtre par query param type= ou origin=
+1. index.html :
+   - Nav fixe (logo Bebas uppercase + search pill bg-cloud + toggle langue pill noir)
+   - Hero 85vh (img Unsplash + hero-gradient + titre + sous-titre + CTA pill blanc)
+   - Section dark "Recettes du moment" (carrousel horizontal + boutons prev/next ronds)
+   - Section filtres (pills type : Tout/Entrées/Plats/Desserts/Boissons/Snacks + pills origine avec drapeaux emoji)
+   - Grille recettes (cards aspect-square, overlay, titre Bebas)
+   - Section dark "Par catégorie" (4 tiles portrait avec photos)
+   - Footer 3 colonnes + legal
 
-FORMAT DONNÉES (recipes.json) :
-- Tableau d'objets avec : id, title_fr/en, description_fr/en, image (URL Unsplash), type, origin, prep_time, cook_time, servings, difficulty, tags[], ingredients_fr/en[{item, quantity}], steps_fr/en[{text, time, parallel?}]
-- translations.json : ~55 clés FR/EN pour toute l'interface
+2. recipe.html :
+   - Nav fixe (logo + bouton imprimer + toggle langue)
+   - Hero 60vh (photo + gradient + titre Bebas géant + description)
+   - Bande meta noire (badges pills : prep, cuisson, temps total, personnes, difficulté en bg-primary)
+   - Contenu 2 colonnes (gap-16 lg:gap-20) :
+     * GAUCHE — Ingrédients :
+       - Calculateur portions : panneau bg-cloud avec boutons +/− (nombre de personnes), affichage portions
+       - Clic sur ingrédient → input pour saisir quantité disponible → Entrée valide → calcule portions/personnes possibles → recalcule tout proportionnellement
+       - parseQuantity() extrait nombre + unité de "500 g", "2 c.à.s", "au goût" etc.
+       - formatQuantity() scale et arrondit proprement
+       - Bouton réinitialiser
+       - Liste ingrédients : justify-between, quantité en pill bg-cloud à droite
+     * DROITE — Étapes :
+       - Barre de progression (h-1.5 bg-cloud, fill bg-primary, compteur X/total)
+       - Accordéon : clic sur étape → valide (cercle vert ✓, texte barré, contenu masqué)
+       - Re-clic → dévalide (revient à l'état normal)
+       - Étapes parallèles : groupées visuellement (border-l-2 border-primary, badge "⚡ En parallèle", cards côte à côte en grid md:grid-cols-2)
+       - Bouton timer sur chaque étape avec time défini (pill noir, onclick démarre Timer)
+   - Timer widget flottant (bas-droite, fond ink)
+   - Lien retour (pill noir)
+
+3. category.html :
+   - Nav fixe
+   - Header section-dark (lien retour + titre Bebas géant + compteur recettes)
+   - Grille identique à homepage (aspect-square, overlay, titre Bebas)
+   - Footer minimal
+
+FONCTIONNALITÉS JS DÉTAILLÉES :
+
+search.js :
+- Module IIFE Search avec init(recipes, callback) et filter(query)
+- Filtre sur 6 champs : title_{lang}, description_{lang}, tags.join(' '), origin, type, ingredients_{lang}.map(i=>i.item).join(' ')
+- Synchro inputs desktop (#search-input) et mobile (#search-input-mobile)
+- Clear() pour reset quand on change de filtre
+
+timer.js :
+- Module IIFE Timer avec start(minutes, label), remove(id), init()
+- Multi-instances simultanées
+- setInterval tick toutes les secondes
+- Notification sonore : Web Audio API oscillateur 800Hz, gain 0.3, durée 300ms
+- Feedback visuel : ring-2 ring-primary sur le widget pendant 2s
+- Widget : #timer-widget, liste de timers avec formatTime(mm:ss), bouton × pour supprimer
+
+i18n.js :
+- Module IIFE I18n avec load(), get(key, replacements), apply(), toggle(), getLang()
+- Charge data/translations.json au DOMContentLoaded
+- Applique sur [data-i18n] (textContent) et [data-i18n-placeholder] (placeholder)
+- Toggle FR↔EN, sauvegarde localStorage('lang')
+- Dispatch CustomEvent 'langchange' pour re-render dynamique
+
+app.js :
+- Module IIFE App
+- Fetch recipes.json, init Search, setup filtres, render carrousel + grille
+- Carrousel : 8 premières recettes, cards 280-300px, scroll horizontal snap, boutons prev/next scrollBy 320px
+- Filtres type : querySelectorAll('.category-btn'), toggle classes bg-ink/text-on-primary vs border/text-ink
+- Filtres origine : querySelectorAll('.origin-btn'), toggle bg-ink vs bg-cloud
+- Grille : createCard() retourne <a> avec img aspect-square + overlay + titre + meta
+
+recipe-detail.js :
+- Module IIFE RecipeDetail avec init(), toggleStep(num) exposé globalement
+- Fetch recipe par query param ?id=
+- Calculateur :
+  - basePersons = recipe.servings (personnes nourries par la recette de base)
+  - currentPersons ajusté par +/−
+  - ratio = currentPersons / basePersons
+  - parseQuantity(str) : regex /^([\d.,/]+)\s*(.*)/ → {number, unit, raw}
+  - formatQuantity(parsed, ratio) : scale, arrondi, format string
+  - Clic ingrédient → input number → Entrée déclenche confirmIngredientCalc()
+  - confirmIngredientCalc : ratio = available / baseNumber → calcule currentPersons → update tout
+- Étapes :
+  - groupSteps(steps) : regroupe les consécutifs {parallel:true} en {type:'parallel', steps:[]}
+  - Render séquentiel : accordéon avec toggle validate/invalidate
+  - Render parallèle : grid 2 cols dans un conteneur border-l primary
+  - completedSteps = Set(), updateProgress() met à jour la barre
+
+category.js :
+- Lit query params type= ou origin=
+- Filtre recipes, render grille identique à homepage
+
+FORMAT DONNÉES :
+
+recipes.json — tableau de 18 objets :
+{
+  "id": "slug-kebab-case",
+  "title_fr": "...", "title_en": "...",
+  "description_fr": "...", "description_en": "...",
+  "image": "https://images.unsplash.com/photo-XXXXX?w=600&q=75",
+  "type": "entree|plat|dessert|boisson|snack",
+  "origin": "france|italie|japon|mexique|inde|maroc|thailande|usa|grece|coree|cuba|vietnam|turquie|angleterre",
+  "prep_time": number (minutes),
+  "cook_time": number (minutes),
+  "servings": number (personnes nourries par la recette),
+  "difficulty": "facile|moyen|difficile",
+  "tags": ["tag1", "tag2", ...],
+  "ingredients_fr": [{"item": "...", "quantity": "500 g"}],
+  "ingredients_en": [{"item": "...", "quantity": "500 g"}],
+  "steps_fr": [{"text": "...", "time": number|null, "parallel": true|absent}],
+  "steps_en": [{"text": "...", "time": number|null, "parallel": true|absent}]
+}
+
+translations.json — objet {fr: {...}, en: {...}} avec ~60 clés couvrant :
+- Navigation, hero, recherche, catégories, filtres
+- Page recette : meta, ingrédients, étapes, timer, calculateur portions
+- Footer, messages vides, labels
+
+CSS (input.css) :
+- @import "tailwindcss" + @source "../public"
+- @theme : toutes les couleurs, fonts, radius, shadow
+- @layer base : body font/color/bg
+- @layer utilities : font-display, scrollbar-hide, carousel-scroll (scroll-snap), hero-gradient, section-dark, text-gradient
+- @media print : .no-print hidden, body 12pt noir, .recipe-hero-img max-height 200px
 
 CONTRAINTES :
-- Bilingue FR/EN avec toggle dans la nav
-- Étapes parallèles marquées "parallel: true" dans JSON, rendues côte à côte avec badge visuel
-- Images : URLs Unsplash directes (pas de fichiers locaux)
-- CSS print pour impression propre des recettes
+- Bilingue FR/EN complet (interface + contenu recettes)
+- Étapes parallèles explicites visuellement
+- Calculateur portions intelligent (par personnes + par ingrédient disponible)
+- Accordéon de validation d'étapes avec barre de progression
+- Images Unsplash directes (fallback onerror vers image générique)
+- CSS print propre pour recettes
 - Responsive : 1 col mobile / 2 col tablet / 3 col desktop
-- 18 recettes couvrant : 9 origines, 5 types, 3 niveaux difficulté
+- serve.json avec cleanUrls:false + rewrite racine
+- 18 recettes : 9+ origines, 5 types, 3 difficultés
+- Zero dépendance runtime, Tailwind v4 build-time only
 ```
 
 ### Fichiers nécessaires pour reproduction
@@ -291,4 +423,4 @@ CONTRAINTES :
 
 ---
 
-*Dernière mise à jour : Phase 3 + 3b complétées. Images Unsplash en place. Page recette avec étapes parallèles. Prompt de reproduction ajouté. Reste : accessibilité, git/GitHub.*
+*Dernière mise à jour : Git configuré, repo push sur https://github.com/MoonGoddd/Recette. Prompt de reproduction complet.*
